@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hassan Asif — Video Editor</title>
+  <meta name="description" content="Hassan Asif is a video editor crafting commercials, music videos, YouTube content and short films." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <a href="#top" class="logo">HASSAN<span>✦</span>ASIF</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact" class="btn btn-dark">Let's talk</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ============ HERO / SHOWREEL ============ -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="dot"></span> Available for projects — 2026</p>
+        <h1>
+          I cut <span class="hl hl-pink">stories</span><br />
+          that <span class="hl hl-yellow">move</span> people.
+        </h1>
+        <p class="lead">
+          Video editor for brands, artists and creators. Commercials, music videos,
+          YouTube and short films — edited with rhythm, colour and a lot of heart.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-pink" data-play="reel">▶ Watch showreel</button>
+          <a href="#work" class="btn btn-outline">See the work</a>
+        </div>
+      </div>
+
+      <div class="reel-card" data-play="reel" role="button" tabindex="0" aria-label="Play showreel">
+        <div class="reel-screen">
+          <div class="reel-shapes">
+            <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+          </div>
+          <div class="reel-label">SHOWREEL <b>2026</b></div>
+          <div class="play-btn">▶</div>
+        </div>
+        <div class="timeline">
+          <div class="track t-video">
+            <i style="--w:18%;--c:var(--pink)"></i><i style="--w:12%;--c:var(--blue)"></i>
+            <i style="--w:24%;--c:var(--yellow)"></i><i style="--w:10%;--c:var(--lime)"></i>
+            <i style="--w:20%;--c:var(--orange)"></i><i style="--w:16%;--c:var(--pink)"></i>
+          </div>
+          <div class="track t-audio">
+            <i style="--w:40%;--c:var(--lime)"></i><i style="--w:60%;--c:var(--blue)"></i>
+          </div>
+          <div class="playhead"></div>
+        </div>
+        <div class="sticker">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <defs><path id="circle" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" /></defs>
+            <text><textPath href="#circle">EDIT ✦ COLOUR ✦ MOTION ✦ SOUND ✦ </textPath></text>
+          </svg>
+          <span>✂</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Commercials ✦ Music Videos ✦ YouTube ✦ Short Films ✦ Social Ads ✦ Documentaries ✦&nbsp;</span>
+        <span>Commercials ✦ Music Videos ✦ YouTube ✦ Short Films ✦ Social Ads ✦ Documentaries ✦&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="stat" style="--bg:var(--yellow)"><b data-count="250">0</b><span>+</span><p>Projects delivered</p></div>
+      <div class="stat" style="--bg:var(--pink)"><b data-count="7">0</b><span>yrs</span><p>Behind the timeline</p></div>
+      <div class="stat" style="--bg:var(--blue);--fg:#fff"><b data-count="40">0</b><span>M+</span><p>Views generated</p></div>
+      <div class="stat" style="--bg:var(--lime)"><b data-count="60">0</b><span>+</span><p>Happy clients</p></div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <div class="section-head">
+        <h2>Selected <span class="hl hl-blue">work</span></h2>
+        <div class="filters" id="filters" role="tablist">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="commercial">Commercial</button>
+          <button class="chip" data-filter="music">Music Video</button>
+          <button class="chip" data-filter="youtube">YouTube</button>
+          <button class="chip" data-filter="film">Short Film</button>
+        </div>
+      </div>
+      <div class="grid" id="workGrid"></div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="about-photo">
+        <div class="photo-frame">
+          <!-- Replace with: <img src="images/hassan.jpg" alt="Hassan Asif"> -->
+          <span class="initials">HA</span>
+        </div>
+        <div class="photo-tag">Hi, I'm Hassan 👋</div>
+      </div>
+      <div class="about-text">
+        <h2>Cut, colour &amp; <span class="hl hl-pink">chaos</span> — tamed.</h2>
+        <p>
+          I'm Hassan Asif, a video editor who believes every frame should earn its place.
+          For the past seven years I've helped brands launch products, artists drop music
+          videos and creators grow channels to millions of subscribers.
+        </p>
+        <p>
+          I obsess over pacing, sound and the tiny cuts nobody notices — because that's
+          what makes people feel something and keep watching.
+        </p>
+
+        <div class="services">
+          <div class="service" style="--bg:var(--yellow)"><span>✂</span><h3>Editing</h3><p>Story-first cuts for any length or format.</p></div>
+          <div class="service" style="--bg:var(--pink)"><span>🎨</span><h3>Colour grading</h3><p>Looks that match the mood and the brand.</p></div>
+          <div class="service" style="--bg:var(--lime)"><span>✦</span><h3>Motion graphics</h3><p>Titles, lower thirds and animated text.</p></div>
+          <div class="service" style="--bg:var(--orange)"><span>♪</span><h3>Sound design</h3><p>Mixing, SFX and music sync that hits.</p></div>
+        </div>
+
+        <h3 class="tools-title">Tools of the trade</h3>
+        <ul class="tools">
+          <li>Premiere Pro</li><li>DaVinci Resolve</li><li>After Effects</li>
+          <li>Final Cut Pro</li><li>Audition</li><li>Photoshop</li><li>CapCut</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CLIENTS ============ -->
+    <section class="section clients" id="clients">
+      <h2>Trusted by <span class="hl hl-yellow">great people</span></h2>
+      <div class="logo-row">
+        <span>NORTHWIND</span><span>Lumen·Co</span><span>VOLTA</span><span>peakstudio</span>
+        <span>ORBIT&nbsp;RECORDS</span><span>Fable</span>
+      </div>
+      <div class="testimonials">
+        <figure class="quote" style="--bg:var(--pink)">
+          <blockquote>"Hassan turned 6 hours of raw footage into a 60-second ad that doubled our click-through rate."</blockquote>
+          <figcaption><b>Sara Khan</b> — Marketing Lead, Northwind</figcaption>
+        </figure>
+        <figure class="quote" style="--bg:var(--lime)">
+          <blockquote>"Fast, creative and totally in sync with the music. Our video hit 2M views in a week."</blockquote>
+          <figcaption><b>DJ Rayyan</b> — Artist, Orbit Records</figcaption>
+        </figure>
+        <figure class="quote" style="--bg:var(--yellow)">
+          <blockquote>"Retention went from 38% to 61% after Hassan took over our edits. Absolute game changer."</blockquote>
+          <figcaption><b>Ali Raza</b> — YouTuber, 1.2M subs</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact-left">
+        <h2>Got footage?<br /><span class="hl hl-yellow">Let's make it pop.</span></h2>
+        <p>Tell me about your project and I'll get back to you within 24 hours.</p>
+        <a class="big-mail" href="mailto:hello@hassanasif.com">hello@hassanasif.com</a>
+        <div class="socials">
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">YouTube</a>
+          <a href="#" target="_blank" rel="noopener">Vimeo</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label>Your name<input name="name" required placeholder="Jane Doe" /></label>
+        <label>Email<input name="email" type="email" required placeholder="jane@company.com" /></label>
+        <label>Project type
+          <select name="type">
+            <option>Commercial / Ad</option><option>Music Video</option>
+            <option>YouTube Content</option><option>Short Film</option><option>Something else</option>
+          </select>
+        </label>
+        <label>Tell me more<textarea name="message" rows="4" required placeholder="Timeline, length, style, budget…"></textarea></label>
+        <button class="btn btn-pink" type="submit">Send it ➜</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Hassan Asif. Cut with love.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+      <div class="lightbox-video" id="lightboxVideo"></div>
+      <div class="lightbox-info" id="lightboxInfo"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
