@@ -159,7 +159,7 @@ function countUp(el) {
 /* ================= CONTACT FORM ================= */
 // No server needed: opens the visitor's email app with the message pre-filled.
 // To receive messages directly instead, point the form at a service like Formspree.
-const CONTACT_EMAIL = "hello@hassanasif.com";
+const CONTACT_EMAIL = "saifullahrao.dev@gmail.com";
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const d = new FormData(e.target);
