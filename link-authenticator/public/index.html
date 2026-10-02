@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Link Authenticator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Link Authenticator</h1>
+      <p class="lede">Paste a link to an article, image or video. You get an accuracy rating, what it gets right and what it gets wrong.</p>
+    </header>
+
+    <form id="check-form">
+      <label for="url" class="sr-only">Link to check</label>
+      <input id="url" name="url" type="text" inputmode="url" autocomplete="off" spellcheck="false"
+             placeholder="https://example.com/article" required>
+      <button id="submit" type="submit">Check link</button>
+    </form>
+
+    <p id="mode-banner" class="banner" hidden>
+      Limited mode: no API key is set, so facts are not checked. Only signals about the source are scored.
+      Add an Anthropic API key to the <code>.env</code> file and restart to turn on fact-checking.
+    </p>
+
+    <section id="progress" class="card" hidden aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <div>
+        <p id="progress-text">Opening the link</p>
+        <p class="muted small">A full check usually takes one to two minutes.</p>
+      </div>
+    </section>
+
+    <p id="error" class="banner error" role="alert" hidden></p>
+
+    <section id="result" hidden>
+      <div class="card verdict">
+        <div id="score" class="score">
+          <span id="score-number">–</span>
+          <span id="score-label" class="small">out of 100</span>
+        </div>
+        <div class="verdict-body">
+          <p id="verdict-label" class="verdict-label"></p>
+          <p id="result-title" class="result-title"></p>
+          <a id="result-link" class="small" target="_blank" rel="noopener noreferrer"></a>
+          <p id="confidence" class="muted small"></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Summary</h2>
+        <p id="summary"></p>
+      </div>
+
+      <div class="columns">
+        <div class="card right">
+          <h2 id="right-heading">What's right</h2>
+          <ul id="right-list"></ul>
+        </div>
+        <div class="card wrong">
+          <h2 id="wrong-heading">What's wrong</h2>
+          <ul id="wrong-list"></ul>
+        </div>
+      </div>
+
+      <div id="claims-card" class="card" hidden>
+        <h2>Claims checked</h2>
+        <div id="claims"></div>
+      </div>
+
+      <div id="limits-card" class="card subtle" hidden>
+        <h2>What couldn't be checked</h2>
+        <ul id="limits"></ul>
+      </div>
+    </section>
+
+    <footer class="muted small">
+      This is an automated check and can make mistakes. Open the sources and judge for yourself before sharing.
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
