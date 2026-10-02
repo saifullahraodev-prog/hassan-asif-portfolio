@@ -1,0 +1,16 @@
+{
+  "name": "link-authenticator",
+  "version": "1.0.0",
+  "description": "Paste a link to an article, image or video and get an accuracy rating with what is right and what is wrong.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0"
+  }
+}
